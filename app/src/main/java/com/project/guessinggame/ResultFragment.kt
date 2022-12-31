@@ -18,7 +18,6 @@ class ResultFragment : Fragment() {
         // Inflate the layout for this fragment
         _binding = FragmentResultBinding.inflate(inflater,container, false)
         val view = binding.root
-
         binding.wonLost.text = ResultFragmentArgs.fromBundle(requireArguments()).result
 
         binding.newGameButton.setOnClickListener {
