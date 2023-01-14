@@ -23,17 +23,20 @@ class GameFragment : Fragment() {
         val view = binding.root
         viewModel = ViewModelProvider(this)[GameViewModel::class.java]
 
-        viewModel.incorrectGuesses.observe(viewLifecycleOwner, Observer { newValue ->
-            binding.incorrectGuesses.text = "Incorrect guesses: $newValue"
-        })
+        binding.gameViewModel = viewModel
+        binding.lifecycleOwner = viewLifecycleOwner //Each time a live data property value in the view model gets updated, the layout no longer has to rely on the fragment code updating its views. The layout can respond to any updates without any further intervention from the fragment.
 
-        viewModel.livesLeft.observe(viewLifecycleOwner, Observer { newValue ->
-            binding.lives.text = "You have $newValue lives left"
-        })
-
-        viewModel.secretWordDisplay.observe(viewLifecycleOwner, Observer { newValue ->
-            binding.word.text = newValue
-        })
+//        viewModel.incorrectGuesses.observe(viewLifecycleOwner, Observer { newValue ->
+//            binding.incorrectGuesses.text = "Incorrect guesses: $newValue"
+//        })
+//
+//        viewModel.livesLeft.observe(viewLifecycleOwner, Observer { newValue ->
+//            binding.lives.text = "You have $newValue lives left"
+//        })
+//
+//        viewModel.secretWordDisplay.observe(viewLifecycleOwner, Observer { newValue ->
+//            binding.word.text = newValue
+//        })
 
         viewModel.gameOver.observe(viewLifecycleOwner, Observer { newValue ->
             if (newValue) {

@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android_Projects/GuessingGame/app/src/main/res/layout/fragment_game.xml" value="0.24375" />
+        <entry key="..\:/Android_Projects/GuessingGame/app/src/main/res/layout/fragment_result.xml" value="0.21920289855072464" />
         <entry key="..\:/GuessingGame/app/src/main/res/layout/activity_main.xml" value="0.24375" />
         <entry key="..\:/GuessingGame/app/src/main/res/layout/fragment_game.xml" value="0.24375" />
         <entry key="..\:/GuessingGame/app/src/main/res/layout/fragment_result.xml" value="0.22552083333333334" />
